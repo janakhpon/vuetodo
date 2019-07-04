@@ -3,7 +3,8 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Createtask from "./views/tasks/CreateTask.vue";
-import TaskList from "./views/tasks/TaskList.vue";
+import Displaylist from "./views/tasks/Displaylist.vue";
+import List from './views/tasks/List.vue';
 import UpdateTask from "./views/tasks/UpdateTask.vue";
 
 Vue.use(Router);
@@ -27,8 +28,13 @@ export default new Router({
     },
     {
       path: "/list",
-      name: "task-list",
-      component: TaskList
+      name: "list",
+      component: List
+    },
+    {
+      path: "/display",
+      name: "display-list",
+      component: Displaylist
     },
     {
       path: "/update",
