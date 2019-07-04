@@ -5,12 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    apiURL: "https://electron-todo-api.herokuapp.com/api"
   },
-  mutations: {
-
-  },
-  actions: {
-
-  }
-})
+  mutations: {},
+  actions: {}
+});

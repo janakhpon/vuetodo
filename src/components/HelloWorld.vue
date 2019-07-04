@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div class="jumbotron custom-bg-dark">
     <h1 class="display-4">MEVN Stack Task Manager</h1>
