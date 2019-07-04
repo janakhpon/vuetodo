@@ -20,6 +20,11 @@
                             List
                         </router-link>
                     </li>
+                                        <li class="nav-item">
+                        <router-link to="/display" class="nav-link" exact>
+                            Display
+                        </router-link>
+                    </li>
                     <li class="nav-item">
                         <router-link to="/create" class="nav-link" exact>
                             Create

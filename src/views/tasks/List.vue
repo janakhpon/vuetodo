@@ -44,10 +44,11 @@
 
 <script>
 
-    import * as taskService from '../../services/TaskService'
+import * as taskService from "../../services/TaskService";
+
 
     export default {
-        name: 'task-list',
+        name: 'list',
         data: function() {
             return {
                 tasks: null,
