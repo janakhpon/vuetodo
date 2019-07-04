@@ -16,12 +16,16 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/tasks" class="nav-link" exact>
-                            Tasks
+                        <router-link to="/list" class="nav-link" exact>
+                            List
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/create" class="nav-link" exact>
+                            Create
                         </router-link>
                     </li>
                    
-
                 </ul>
             </div>
         </nav>
@@ -29,7 +33,7 @@
 </template>
 
 <script>
-    import * as auth from '../services/AuthService';
+  
 
     export default {
         name: 'Navbar',
