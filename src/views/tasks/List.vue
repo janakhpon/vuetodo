@@ -23,28 +23,18 @@
               type="button"
               tag="button"
               class="card-link btn btn-primary"
-              :to="{ name: 'update-task', params: { id: task._id } }"
+              :to="{ name: 'update', params: { id: task._id } }"
               exact
             >Edit</router-link>
             <a
-              v-on:click.prevent="currentTaskId = task._id"
+              v-on:click="deleteTask(task._id)"
               class="card-link btn btn-danger"
               href="#"
-              v-b-modal.modal1
             >Delete</a>
           </div>
         </div>
       </div>
 
-      <div>
-        <b-modal id="modal1" ref="modal" centered title="Delete Confirmation">
-          <p class="my-4">Are you sure you would like to delete this task?</p>
-          <div slot="modal-footer" class="w-100 text-right">
-            <b-btn slot="md" class="mr-1" variant="danger" @click="deleteTask">Delete</b-btn>
-            <b-btn slot="md" variant="secondary" @click="cancelModal">Cancel</b-btn>
-          </div>
-        </b-modal>
-      </div>
     </div>
 
     <div v-if="tasks && tasks.length === 0" class="ml-2">
@@ -76,6 +66,12 @@ export default {
            console.log(res.data.tasks);
         })
         .catch(err => console.log(err));
+    },
+
+    deleteTask(id){
+        this.axios.delete(`https://electron-todo-api.herokuapp.com/api/task/${id}`).then(res => {
+            console.log("deleted");
+        }).catch(err => console.log(err));
     }
   }
 };

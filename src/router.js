@@ -38,7 +38,7 @@ export default new Router({
     },
     {
       path: "/update",
-      name: "update-task",
+      name: "update",
       component: UpdateTask
     }
   ]
