@@ -69,7 +69,7 @@ export default {
     },
 
     deleteTask(id){
-        this.axios.delete(`https://electron-todo-api.herokuapp.com/api/task/${id}`).then(res => {
+        this.axios.delete(`https://electron-todo-api.herokuapp.com/api/task/ID/${id}`).then(res => {
             console.log("deleted");
         }).catch(err => console.log(err));
     }

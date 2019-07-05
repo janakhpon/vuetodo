@@ -39,7 +39,7 @@ export default {
     gettask() {
       this.axios
         .get(
-          `https://electron-todo-api.herokuapp.com/api/task/${this.$route.params.id}`   
+          `https://electron-todo-api.herokuapp.com/api/task/ID/${this.$route.params.id}`   
         )
         .then(res => {
           this.task = res.data;
