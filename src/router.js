@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Createtask from "./views/tasks/CreateTask.vue";
-import Displaylist from "./views/tasks/Displaylist.vue";
+import Search from "./views/tasks/SearchTask.vue";
 import List from './views/tasks/List.vue';
 import UpdateTask from "./views/tasks/UpdateTask.vue";
 
@@ -32,9 +32,9 @@ export default new Router({
       component: List
     },
     {
-      path: "/display",
-      name: "display-list",
-      component: Displaylist
+      path: "/search",
+      name: "search",
+      component: Search
     },
     {
       path: "/update",
