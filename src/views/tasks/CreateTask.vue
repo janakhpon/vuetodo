@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import * as taskService from "../../services/TaskService";
-
 export default {
   name: "create-task",
   data: function() {
@@ -34,12 +32,13 @@ export default {
     };
   },
   methods: {
-    onSubmit: async function() {
-      const request = {
-        task: this.task
-      };
-      await taskService.addTask(request);
-      this.$router.push({ name: "task-list" });
+    onSubmit() {
+      this.axios
+        .post("https://electron-todo-api.herokuapp.com/api/task", this.task)
+        .then(res => {
+          console.log("succed");
+        })
+        .catch(err => console.log(err));
     }
   }
 };
